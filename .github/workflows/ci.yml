@@ -68,6 +68,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-cabal-${{ matrix.ghc }}
 
+    - name: Try sth
+      run: git checkout reprinter.cabal
+
     - name: Build
       run: cabal build
 
